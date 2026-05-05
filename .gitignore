@@ -43,3 +43,25 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase / secrets
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Local machine SDK paths
+android/local.properties
+
+# Env files
+.env
+.env.*
+
+# Signing keys / certificates
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.p8
+
+# Service account files
+*service*account*.json
