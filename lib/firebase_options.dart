@@ -2,7 +2,7 @@
 // Ignore changes to this file unless you know what you are doing.
 
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
-import 'package:flutter_platform_interface/flutter_platform_interface.dart'
+import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, TargetPlatform;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
@@ -32,20 +32,17 @@ class DefaultFirebaseOptions {
     if (defaultTargetPlatform == TargetPlatform.macOS) {
       return macos;
     }
-    if (defaultTargetPlatform == TargetPlatform.web) {
-      return web;
-    }
     throw UnsupportedError(
       'DefaultFirebaseOptions are not supported for this platform.',
     );
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyXxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    appId: '1:000000000000:android:xxxxxxxxxxxxxxxxxxxxxxxx',
-    messagingSenderId: '000000000000',
-    projectId: 'smart-notifier-xxxxx',
-    storageBucket: 'smart-notifier-xxxxx.appspot.com',
+    apiKey: 'AIzaSyB0M-krNVDORGU33uGUNPk1nq0KOIviVBk',
+    appId: '1:1020099843806:android:a033f9703636f0ec2f544f',
+    messagingSenderId: '1020099843806',
+    projectId: 'smart-notifier-ba9e9',
+    storageBucket: 'smart-notifier-ba9e9.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(

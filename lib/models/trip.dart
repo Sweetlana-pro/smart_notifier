@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/foundation.dart';
 
 enum TripStatus { onTime, delayed, gateChanged, cancelled }

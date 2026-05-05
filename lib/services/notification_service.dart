@@ -44,7 +44,7 @@ class NotificationService {
         .resolvePlatformSpecificImplementation<
           AndroidFlutterLocalNotificationsPlugin
         >()
-        ?.requestNotificationPermission();
+        ?.requestNotificationsPermission();
   }
 
   /// Show a trip update notification

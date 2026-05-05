@@ -1,4 +1,4 @@
-package com.example.smart_notifier
+package com.protsenko.smart_notifier
 
 import io.flutter.embedding.android.FlutterActivity
 
