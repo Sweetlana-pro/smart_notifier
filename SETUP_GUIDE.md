@@ -5,15 +5,13 @@
 ### System Requirements
 - Flutter SDK: >= 3.11.1
 - Android: API 21+ (or Android Studio with emulator)
-- iOS: iOS 12.0+ (requires Xcode)
-- macOS: Xcode Command Line Tools
 
 ### Verify Flutter Setup
 ```bash
 flutter doctor
 ```
 
-Optional but recommended: Install Xcode for iOS development (required: 30GB+ disk space)
+Optional but recommended: Install Android Studio for emulator management and SDK tools.
 
 ## Firebase Setup (Critical!)
 
@@ -30,31 +28,17 @@ Optional but recommended: Install Xcode for iOS development (required: 30GB+ dis
 1. In Firebase Console, select your project
 2. Click "Add App" → "Android"
 3. Enter:
-   - **Package name**: `com.example.smart_notifier`
+   - **Package name**: `com.protsenko.smart_notifier`
    - **App nickname**: Smart Notifier (optional)
 4. Click "Register app"
 5. Download `google-services.json`
 6. Place it in: `android/app/google-services.json`
 
-### Step 3: Register iOS App
-
-1. Click "Add App" → "iOS"
-2. Enter:
-   - **Bundle ID**: `com.example.smartNotifier`
-   - **App nickname**: Smart Notifier (optional)
-3. Click "Register app"
-4. Download `GoogleService-Info.plist`
-5. In Xcode:
-   - Open `ios/Runner.xcworkspace`
-   - Right-click "Runner" → "Add Files to Runner"
-   - Select `GoogleService-Info.plist`
-   - Ensure it's added to all targets
-
-### Step 4: Enable Cloud Messaging
+### Step 3: Enable Cloud Messaging
 
 1. In Firebase Console
 2. Go to: Cloud Messaging tab
-3. Note your **Server Key** (needed for sending test messages)
+//3. Note your **Server Key** (needed for sending test messages)
 
 ## Project Setup
 
@@ -96,20 +80,6 @@ android {
 }
 ```
 
-### Step 4: iOS Configuration
-
-**If using Xcode:**
-```bash
-cd ios
-pod install
-cd ..
-```
-
-**Minimum iOS version:**
-- Edit `ios/Podfile`
-- Find: `platform :ios, '12.0'`
-- Keep as-is (12.0+) or update to 14.0 for better support
-
 ## Building & Running
 
 ### First Run (Android)
@@ -123,11 +93,6 @@ or
 flutter run -d android
 ```
 
-### First Run (iOS)
-```bash
-flutter run -d ios
-```
-
 ### Run on Physical Device
 
 **Android:**
@@ -135,12 +100,6 @@ flutter run -d ios
 adb devices                    # List connected devices
 flutter run -d <device-id>    # Run on specific device
 ```
-
-**iOS:**
-- Connect iPhone via USB
-- Trust the device in popup
-- In Xcode: Select device from top menu
-- `flutter run -d ios`
 
 ## Permissions Setup
 
@@ -151,19 +110,6 @@ Already configured in `android/app/src/main/AndroidManifest.xml`:
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-```
-
-### iOS Permissions
-
-Already configured in `ios/Runner/Info.plist`:
-
-```xml
-<key>NSLocalNetworkUsageDescription</key>
-<string>This app uses network to sync your trips</string>
-<key>NSBonjourServiceTypes</key>
-<array>
-  <string>_http._tcp</string>
-</array>
 ```
 
 ## Testing the App
@@ -283,17 +229,6 @@ flutter run
    flutter run
    ```
 
-### Problem: "Pods not found" (iOS)
-
-**Solution:**
-```bash
-cd ios
-rm -rf Pods Podfile.lock
-pod install
-cd ..
-flutter run
-```
-
 ### Problem: "Permission denied" (Android)
 
 **Solution:**
@@ -356,13 +291,6 @@ Run with: `flutter run -v` to see verbose logs
 1. Install Flutter extension (by Dart Code)
 2. Open workspace root: Code → Open Folder → smart_notifier
 3. Install dependencies: View → Command Palette → "Pub: Get Packages"
-
-### Xcode (iOS)
-
-1. Open: `ios/Runner.xcworkspace` (NOT Runner.xcodeproj!)
-2. Select scheme: Select Runner project → Targets → Runner
-3. Select device from top menu
-4. Cmd+R to run
 
 ## Performance Optimization
 
