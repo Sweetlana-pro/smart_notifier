@@ -1,6 +1,6 @@
 # smart_notifier
 
-# Smart Notifier - Travel Trip Management App
+# Smart Notifier - Travel Trip Mobile Management App
 
 A lightweight Flutter application that demonstrates intelligent push notification handling with silent background sync - perfect for showcasing reliable, real-world app architecture.
 
