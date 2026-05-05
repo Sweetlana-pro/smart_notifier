@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/81c24728-cf95-4f29-8815-cc196ef619c4
+
 # smart_notifier
 
 # Smart Notifier - Travel Trip Mobile Management App
