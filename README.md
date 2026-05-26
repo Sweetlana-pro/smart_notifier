@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/81c24728-cf95-4f29-8815-cc196ef619c4
 
 # Smart Notifier - Travel Trip Mobile Management App
 
-A lightweight Flutter application that demonstrates intelligent push notification handling with silent background sync - perfect for showcasing reliable, real-world app architecture.
+A lightweight Flutter application that demonstrates intelligent push notification handling with silent background sync.
 
 ## Tech Stack
 
@@ -24,9 +24,7 @@ Instead of just displaying every notification, this app intelligently:
 - Receives silent push messages (data-only, no user-facing alert)
 - Updates trip data in the background
 - Compares old vs new state
-- Shows notification **only if something meaningful changed**
-
-This showcases production-grade reliability and state management - exactly what interviewers look for.
+- Shows notification only if something meaningful changed
 
 ## Key Features
 
@@ -138,7 +136,7 @@ Send this via Firebase Console or backend API:
 }
 ```
 
-The app will:
+The app:
 1. Receive the silent data message
 2. Compare with old state (was it already delayed?)
 3. Only show notification if status actually changed
